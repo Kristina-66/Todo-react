@@ -1,27 +1,12 @@
-.addTodo  {
-    display: flex;
-    margin-top: 18px;
-    height: 56px;
+.addTodo {
+  display: flex;
+  margin-top: 18px;
+  height: 56px;
+  margin-bottom: 26px;
 }
-
-.buttonAddTodo {
-    margin-left: 25px;
-  width: 109px;
-  background: #2f80ed;
-  box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
-  border-radius: 12px;
-  color: #fff;
-  outline: none;
-  border: none;
-}
-
-.buttonAddTodo:hover {
-    cursor: pointer;
-    background: #679fe9;
-  }
 
 .inputAddTodo {
-    width: 100%;
+  width: 100%;
   padding-left: 12px;
   border: 1px solid #bdbdbd;
   border-radius: 12px;
@@ -35,7 +20,27 @@
 }
 
 .inputAddTodo:hover {
-    outline: none;
-    border: 1px solid #393535;
-    transform: scale(1.1);
+  outline: none;
+  transform: scale(1.05);
+  border: 1px solid #393535;
+}
+
+.buttonAddTodo {
+  margin-left: 25px;
+  width: 109px;
+  background: #2f80ed;
+  box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+  border-radius: 12px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonAddTodo:hover {
+  background: #679fe9;
+}
+
+.buttonAddTodo:active {
+  transform: translate(1px, 1px);
 }
