@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import styles from "./addTodo.module.css";
 import { v4 as uuidv4 } from "uuid";
+import { useSelector, useDispatch } from "react-redux";
+import { addTodo } from "../../../redux/slices/todos";
 
-const AddTodo = ({ todos, setTodos, tabs }) => {
+const AddTodo = () => {
+  const dispatch = useDispatch();
   const [todo, setTodo] = useState("");
+  const tabs = useSelector((state) => state.tabs.tabs)
 
   const inputHandler = (e) => {
     setTodo(e.target.value);
   };
   
-  const addTodo = (e) => {
+  const handleTodo = (e) => {
     if (todo === "") {
       alert("enter task");
     } else {
@@ -17,9 +21,8 @@ const AddTodo = ({ todos, setTodos, tabs }) => {
         id: uuidv4(),
         text: todo,
         completed: false,
-        date: new Date(),
       };
-      setTodos([...todos, newTodo]);
+      dispatch(addTodo(newTodo));
       setTodo("");
       e.target.reset();
     }
@@ -28,7 +31,7 @@ const AddTodo = ({ todos, setTodos, tabs }) => {
 
   return (
     !tabs[2].isActive && (
-      <form className={styles.addTodo} onSubmit={addTodo}>
+      <form className={styles.addTodo} onSubmit={handleTodo}>
         <input
           className={styles.inputAddTodo}
           value={todo}
@@ -42,4 +45,3 @@ const AddTodo = ({ todos, setTodos, tabs }) => {
   );
 };
 export default AddTodo;
-      

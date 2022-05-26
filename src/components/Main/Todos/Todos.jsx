@@ -1,34 +1,34 @@
 import React from "react";
 import Todo from "./Todo/Todo";
 import styles from "./todos.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteAll } from "../../../redux/slices/todos";
 
-export default function Todos({ todos, setTodos, tabs }) {
-  
+export default function Todos() {
+  const { todos, tabs } = useSelector((state) => state);
+  const currentTabs = tabs.tabs;
+  const dispatch = useDispatch();
+
   const deleteAllClickHandler = () => {
-    const newArray = todos.filter((todo) => todo.completed === false);
-    setTodos(newArray);
+    dispatch(deleteAll());
   };
-  
+
   return (
     <>
-      {todos.map((todo) => {
-        if (tabs[0].isActive) {
-          return (
-            <Todo todos={todos} setTodos={setTodos} todo={todo} tabs={tabs} />
-          );
-        } else if (tabs[1].isActive && !todo.completed) {
-          return (
-            <Todo todos={todos} setTodos={setTodos} todo={todo} tabs={tabs} />
-          );
-        } else if (tabs[2].isActive) {
+      {todos.todos.map((todo) => {
+        if (currentTabs[0].isActive) {
+          return <Todo todo={todo} tabs={currentTabs} key={todo.id} />;
+        } else if (currentTabs[1].isActive && !todo.completed) {
+          return <Todo todo={todo} tabs={currentTabs} key={todo.id} />;
+        } else if (currentTabs[2].isActive) {
           return todo.completed ? (
-            <Todo todos={todos} setTodos={setTodos} todo={todo} tabs={tabs} />
+            <Todo todo={todo} tabs={currentTabs} key={todo.id} />
           ) : null;
         }
         return null;
       })}
       <div className={styles.btnDeleteAllWrapper}>
-        {tabs[2].isActive && (
+        {currentTabs[2].isActive && (
           <button
             type="button"
             className={styles.deleteAll}
