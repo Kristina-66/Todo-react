@@ -1,38 +1,38 @@
 .btnDeleteAllWrapper {
-    margin-top: 32px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .deleteAll {
-    position: relative;
-    padding-left: 19px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 14.63px;
-    width: 124px;
-    height: 40px;
-    background: #eb5757;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0px 2px 3px 
-  }
-  
-  .deleteAll::before {
-    content: "🗑";
-    position: absolute;
-    top: 14px;
-    left: 26px;
-  }
-  
-  .deleteAll:hover {
-    background: #b30a0a;
-  }
-  
-  .deleteAll:active {
-    transform: translate(1px, 1px);
-  }
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteAll {
+  position: relative;
+  padding-left: 19px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14.63px;
+  width: 124px;
+  height: 40px;
+  background: #eb5757;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px;
+}
+
+.deleteAll::before {
+  content: url("./delete3.png");
+  position: absolute;
+  top: 9px;
+  left: 12px;
+}
+
+.deleteAll:hover {
+  background: #b30a0a;
+}
+
+.deleteAll:active {
+  transform: translate(1px, 1px);
+}
