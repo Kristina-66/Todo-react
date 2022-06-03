@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Todo}</h1>
+<h1 align="center">{#Todo}</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/Melancholia66">
+    <a href="https://github.com/Melancholia66/React.git">
       Solution
     </a>
     <span> | </span>
@@ -89,5 +89,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://flourishing-liger-4288ad.netlify.app/)
-- GitHub [@your-username](https://github.com/Melancholia66)
+- Website [Todo/netlify](https://flourishing-liger-4288ad.netlify.app/)
+- GitHub [@Melancholia66](https://github.com/Melancholia66)
