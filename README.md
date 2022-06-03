@@ -22,9 +22,7 @@
   </h3>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 
-## Table of Contents
 
 - [Overview](#overview)
   - [Built With](#built-with)
@@ -48,9 +46,9 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 ### Built With
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
+- [Create React App (CRA)](https://github.com/facebook/create-react-app)
 - [CSS modules]
 - [Redux-persist]
 - [@reduxjs/toolkit]
@@ -60,7 +58,7 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
+This site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
 
 ## How To Use
 
